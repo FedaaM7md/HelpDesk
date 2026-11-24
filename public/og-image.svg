@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0F5C55"/>
+  <rect x="0" y="470" width="1200" height="160" fill="#0A3A35"/>
+  <g transform="translate(96 120) scale(2.4)">
+    <path d="M5 9h13a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8h-3.5l-3.2 6.2v-6.2H9a8 8 0 0 1-8-8v-8a8 8 0 0 1 8-8Z" fill="#E6F4EF"/>
+    <path d="M15 10h13a7 7 0 0 1 7 7v7a7 7 0 0 1-7 7h-2.4l-2.6 5.4v-5.4h-2a7 7 0 0 1-7-7v-7a7 7 0 0 1 7-7Z" fill="#F26B5B"/>
+    <circle cx="12.2" cy="18" r="1.35" fill="#0F5C55"/>
+    <circle cx="16.6" cy="18" r="1.35" fill="#0F5C55"/>
+    <circle cx="12.2" cy="23" r="1.35" fill="#0F5C55"/>
+  </g>
+  <text x="96" y="360" fill="#FFFFFF" font-family="'Noto Kufi Arabic','Almarai',Segoe UI,sans-serif" font-size="76" font-weight="700">HelpDesk</text>
+  <text x="96" y="422" fill="#A7D9CC" font-family="'Almarai',Segoe UI,sans-serif" font-size="34" font-weight="600">FiberNet ISP support</text>
+  <text x="96" y="474" fill="#CDE9E1" font-family="'Almarai',Segoe UI,sans-serif" font-size="28">Support that listens, then solves.</text>
+  <text x="96" y="560" fill="#8FC6B8" font-family="'Almarai',Segoe UI,sans-serif" font-size="24" dir="rtl">دعم يستمع إليك، ثم يحل المشكلة.</text>
+</svg>

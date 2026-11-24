@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'title' => 'مركز المعرفة',
+    'subtitle' => 'أدلة وإجابات وملاحظات عملية من فريق الدعم.',
+    'search_placeholder' => 'ابحث في المقالات…',
+    'categories' => 'التصنيفات',
+    'all_articles' => 'كل المقالات',
+    'all_categories' => 'كل التصنيفات',
+    'article_count' => ':count مقالة',
+    'read_more' => 'قراءة المقال',
+    'views' => ':count مشاهدة',
+    'updated' => 'آخر تحديث :date',
+    'related' => 'مقالات ذات صلة',
+    'back' => 'العودة إلى مركز المعرفة',
+    'empty' => 'لم تُنشر أي مقالات بعد.',
+    'empty_search' => 'لا توجد مقالات تطابق بحثك. جرّب كلمة أخرى أو تصفّح التصنيفات.',
+    'need_help' => 'ما زلت تحتاج مساعدة؟',
+    'need_help_text' => 'قدّم تذكرة وسيتابع معك أحد موظفي الدعم.',
+    'submit_ticket' => 'تقديم تذكرة',
+    'reading_time' => 'قراءة :count دقيقة',
+    'published' => 'نُشرت',
+    'results_for' => 'نتائج البحث عن «:term»',
+    'category_label' => 'التصنيف',
+];

@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'title' => 'Knowledge base',
+    'subtitle' => 'Guides, answers and practical notes from the support team.',
+    'search_placeholder' => 'Search articles…',
+    'categories' => 'Categories',
+    'all_articles' => 'All articles',
+    'all_categories' => 'All categories',
+    'article_count' => ':count article|:count articles',
+    'read_more' => 'Read article',
+    'views' => ':count views',
+    'updated' => 'Updated :date',
+    'related' => 'Related articles',
+    'back' => 'Back to knowledge base',
+    'empty' => 'No articles have been published yet.',
+    'empty_search' => 'No articles matched your search. Try a different word or browse the categories.',
+    'need_help' => 'Still need help?',
+    'need_help_text' => 'Open a ticket and a support agent will follow up with you.',
+    'submit_ticket' => 'Submit a ticket',
+    'reading_time' => ':count min read',
+    'published' => 'Published',
+    'results_for' => 'Results for “:term”',
+    'category_label' => 'Category',
+];

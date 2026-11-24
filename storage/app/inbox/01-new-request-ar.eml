@@ -1,0 +1,28 @@
+From: Noura Al-Salem <noura@example.test>
+To: support@helpdesk.test
+Subject: مشكلة في تسجيل الدخول بعد تحديث التطبيق
+Date: Mon, 23 Nov 2026 09:14:00 +0300
+Message-ID: <demo-inbox-001@example.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="helpdesk-boundary-001"
+
+
+--helpdesk-boundary-001
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+مرحبًا فريق الدعم،
+
+بعد تحديث التطبيق أمس لم أعد أستطيع تسجيل الدخول. تظهر رسالة "بيانات الدخول غير صحيحة" رغم أنني لم أغيّر كلمة المرور.
+
+جرّبت إعادة تعيين كلمة المرور من الرابط لكن المشكلة استمرت. أرفقت ملاحظاتي حول الخطوات التي جربتها.
+
+شكرًا،
+نورة
+--helpdesk-boundary-001
+Content-Type: text/plain; charset=UTF-8; name="troubleshooting-notes.txt"
+Content-Disposition: attachment; filename="troubleshooting-notes.txt"
+Content-Transfer-Encoding: base64
+
+TGludXggLyBDaHJvbWUgMTIwIC0+IGZhaWxlZCBsb2dpbiBhZnRlciB1cGRhdGUKV2luZG93cyAvIEVkZ2UgLS0+IHNhbWUgZXJyb3IKUmVzZXQgbGluayB1c2VkIHR3aWNlIC0+IHN0aWxsIGZhaWxlZAo=
+--helpdesk-boundary-001--

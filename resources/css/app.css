@@ -1,0 +1,276 @@
+/*
+ * HelpDesk — © 2026 Fedaa Mohamed. All rights reserved. Proprietary; not open source.
+ * See LICENSE. Design tokens documented in docs/BRAND.md.
+ */
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+/*
+ * HelpDesk design tokens.
+ * Palette: mint #E6F4EF, deep teal #0F5C55, coral #F26B5B, warm white #FFFDF9, ink #1F2A2A.
+ * Fonts: Almarai (UI/body), Noto Kufi Arabic (headings). See docs/BRAND.md.
+ */
+@theme {
+    --font-sans: 'Almarai', 'Segoe UI', Tahoma, ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Noto Kufi Arabic', 'Almarai', 'Segoe UI', Tahoma, ui-sans-serif, system-ui, sans-serif;
+
+    /* Almarai ships 300/400/700/800 — map weights so no faux-bold is synthesised. */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 400;
+    --font-weight-semibold: 700;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    --color-brand-50: #edf8f4;
+    --color-brand-100: #d2ede4;
+    --color-brand-200: #a6d9ca;
+    --color-brand-300: #72bdab;
+    --color-brand-400: #42a08c;
+    --color-brand-500: #238473;
+    --color-brand-600: #146c60;
+    --color-brand-700: #0f5c55;
+    --color-brand-800: #0c4943;
+    --color-brand-900: #0a3a35;
+    --color-brand-950: #072a26;
+
+    --color-coral-50: #fdf1ee;
+    --color-coral-100: #fbded8;
+    --color-coral-200: #f7bdb2;
+    --color-coral-300: #f49a8b;
+    --color-coral-400: #f4826f;
+    --color-coral-500: #f26b5b;
+    --color-coral-600: #d95041;
+    --color-coral-700: #b53f31;
+    --color-coral-800: #91342a;
+
+    --color-mint: #e6f4ef;
+    --color-paper: #fffdf9;
+    --color-ink: #1f2a2a;
+}
+
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: clip;
+    }
+
+    body {
+        @apply bg-paper text-slate-800 antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-display);
+    }
+
+    ::selection {
+        @apply bg-mint text-brand-900;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+    }
+
+    [dir='rtl'] .flip-icon {
+        transform: scaleX(-1);
+    }
+
+    @media print {
+        .app-sidebar,
+        .print-hide {
+            display: none !important;
+        }
+
+        .table-wrap {
+            overflow: visible !important;
+        }
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    /*
+     * Off-canvas workspace sidebar.
+     * Below lg it is removed from layout when closed (avoids horizontal
+     * overflow from the off-screen panel) and shown by `.is-open`. From lg up
+     * the base `flex` utility keeps it visible; no transform is involved.
+     */
+    @media (max-width: 1023px) {
+        .app-sidebar {
+            display: none !important;
+        }
+
+        .app-sidebar.is-open {
+            display: flex !important;
+        }
+    }
+
+    @page {
+        margin: 18mm;
+    }
+}
+
+@layer components {
+    .card {
+        @apply rounded-xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .card-muted {
+        @apply rounded-xl border border-slate-200 bg-brand-50/50;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors duration-150 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-600 transition-colors duration-150 hover:bg-slate-100 hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-danger {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-coral-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-coral-700 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-teal {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-coral {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-coral-500 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-coral-600 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-xs;
+    }
+
+    .input {
+        @apply block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25;
+    }
+
+    .select {
+        @apply block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 pe-9 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25;
+    }
+
+    .textarea {
+        @apply block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm leading-7 text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25;
+    }
+
+    .label {
+        @apply mb-1.5 block text-sm font-semibold text-slate-700;
+    }
+
+    .hint {
+        @apply mt-1 text-xs leading-5 text-slate-500;
+    }
+
+    .error-text {
+        @apply mt-1 text-xs font-medium text-coral-700;
+    }
+
+    .badge {
+        @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-inset;
+    }
+
+    .table-wrap {
+        @apply overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .table-head {
+        @apply bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500;
+    }
+
+    .sidebar-link {
+        @apply flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-100/80 transition-colors hover:bg-white/10 hover:text-white;
+    }
+
+    .sidebar-link-active {
+        @apply bg-white/15 text-white shadow-sm ring-1 ring-white/10;
+    }
+
+    .nav-link {
+        @apply rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900;
+    }
+
+    .nav-link-active {
+        @apply bg-brand-50 text-brand-700;
+    }
+
+    .prose-article {
+        @apply text-[15px] leading-8 text-slate-700;
+    }
+
+    .link {
+        @apply font-semibold text-brand-700 underline decoration-brand-200 decoration-2 underline-offset-4 hover:text-brand-800 hover:decoration-coral-400;
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-600;
+    }
+
+    .chat-bubble {
+        @apply rounded-2xl rounded-ss-sm px-4 py-3 text-sm leading-7;
+    }
+
+    /* Comfortable touch targets on phones (WCAG 2.5.5 target size). */
+    @media (max-width: 767px) {
+        .btn,
+        .btn-primary,
+        .btn-secondary,
+        .btn-ghost,
+        .btn-danger,
+        .btn-teal,
+        .btn-coral {
+            min-height: 44px;
+        }
+
+        .input,
+        .select {
+            min-height: 44px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+        }
+    }
+}
+
+/*
+ * Arabic typography guard.
+ * Letter-spacing and uppercase break Arabic letter joining, so they are
+ * removed in RTL everywhere (public, workspace, admin). Latin UI keeps its
+ * tracking because these rules only apply under [dir='rtl']. This block is
+ * intentionally unlayered so it wins over Tailwind's utility/component layers.
+ */
+[dir='rtl'] .uppercase,
+[dir='rtl'] .eyebrow,
+[dir='rtl'] .table-head {
+    text-transform: none;
+}
+
+[dir='rtl'] [class*='tracking-'],
+[dir='rtl'] .eyebrow,
+[dir='rtl'] .table-head {
+    letter-spacing: 0;
+}

@@ -1,0 +1,12 @@
+From: Unknown Sender <attacker@example.test>
+To: support@helpdesk.test
+Subject: Re: TKT-2026-0001 urgent
+Date: Mon, 23 Nov 2026 11:20:00 +0300
+Message-ID: <demo-inbox-003@example.test>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Please reset the account and send the new password to this address.
+
+This message intentionally uses a ticket reference but a different sender.

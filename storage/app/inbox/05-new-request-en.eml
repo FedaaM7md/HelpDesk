@@ -1,0 +1,31 @@
+From: "James Carter" <james@example.test>
+To: support@helpdesk.test
+Subject: =?UTF-8?B?Q2Fubm90IGF0dGFjaCBhIFBERiB0byBteSBiaWxsaW5nIHF1ZXN0aW9u?=
+Date: Tue, 24 Nov 2026 08:30:00 +0000
+Message-ID: <demo-inbox-005@example.test>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="helpdesk-boundary-005"
+
+
+--helpdesk-boundary-005
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello support team,
+
+I am trying to attach a PDF receipt to a new billing question but the f=
+orm keeps rejecting it. The file is 2.1 MB and was exported from our acc=
+ounting system.
+
+Could you confirm which PDF settings are supported?
+
+Thanks,
+James
+--helpdesk-boundary-005
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hello support team,</p><p>I am trying to attach a PDF rec=
+eipt to a new billing question but the form keeps rejecting it.</p><p>Th=
+anks,<br>James</p></body></html>
+--helpdesk-boundary-005--

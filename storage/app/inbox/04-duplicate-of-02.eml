@@ -1,0 +1,30 @@
+From: سارة العتيبي <sara@example.test>
+To: support@helpdesk.test
+Subject: Re: [TKT-2026-0001] لا أستطيع رفع صورة في نموذج الطلب
+In-Reply-To: <demo-ticket-0001@helpdesk.test>
+References: <demo-ticket-0001@helpdesk.test>
+Date: Mon, 23 Nov 2026 10:05:00 +0300
+Message-ID: <demo-inbox-002@example.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="helpdesk-boundary-002"
+
+
+--helpdesk-boundary-002
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+مرحبًا،
+
+جرّبت إعادة تسمية الملف كما اقترحتم وأصبح الرفع يعمل. لكن اسم الملف الأصلي كان يحتوي على رموز مثل # و%، فهل هذا قيد دائم؟
+
+أرفقت صورة صغيرة للتأكيد.
+
+شكرًا لسرعة ردكم،
+سارة
+--helpdesk-boundary-002
+Content-Type: image/png; name="confirmation.png"
+Content-Disposition: attachment; filename="confirmation.png"
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==
+--helpdesk-boundary-002--
